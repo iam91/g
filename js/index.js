@@ -72,7 +72,7 @@ window.onload = function(){
     pie2.data = data2;
     pie2.radius = '50%';
     pie3.data = data3;
-    pie3.radius = '35%';
+    pie3.radius = '32%';
 
 	option = {
 	    backgroundColor: '#2c343c',
