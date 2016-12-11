@@ -1,5 +1,7 @@
 window.onload = function(){
 
+	var r = window.innerHeight / window.innerWidth;
+
 	data1 = [
         {value:100, name:''},
         {value:105, name:''},
@@ -31,8 +33,8 @@ window.onload = function(){
 	pie1 = {
             name:'',
             type:'pie',
-            radius : '55%',
-            center: ['50%', '50%'],
+            radius : '60%',
+            center: ['50%', '42%'],
             data: data1,
             roseType: 'angle',
             label: {
@@ -68,29 +70,21 @@ window.onload = function(){
     	pie3[key] = pie1[key];
     }
     pie2.data = data2;
-    pie2.radius = '45%';
+    pie2.radius = '50%';
     pie3.data = data3;
-    pie3.radius = '35%';
+    pie3.radius = '40%';
 
 	option = {
 	    backgroundColor: '#2c343c',
 
-	    geo: {
-	    	left: '10%'
-	    },
-
-	    graphic: {
-	    	left: '10%'
-	    },
-
 	    title: {
-	        text: 'Customized Pie',
-	        left: 'center',
-	        top: 20,
-	        textStyle: {
-	            color: '#ccc'
-	        }
-	    },
+		    text: 'Customized Pie',
+		    left: 'center',
+		    top: 20,
+		    textStyle: {
+		        color: '#ccc'
+		    }
+		},
 
 	    visualMap: {
 	        show: false,
@@ -106,6 +100,7 @@ window.onload = function(){
 	};
 
 	var fig = document.querySelector('#fig');
+	document.body.style.height = document.body.clientWidth * r + 'px';
 
 	var figChart1 = echarts.init(fig);
 	
